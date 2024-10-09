@@ -19,4 +19,7 @@ public class Cart extends Light{
     public double exhaust(){
         return (pollution+1000)*60;
     }
+    public void hitchhikers(){
+        System.out.println(2);
+    }
 }
