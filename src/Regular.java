@@ -19,4 +19,10 @@ public class Regular extends Vehicles{
     public double exhaust(){
         return super.exhaust()*24;
     }
+    public void noise(){
+        System.out.println(60);
+    }
+    public void hitchhikers(){
+        System.out.println(4);
+    }
 }
