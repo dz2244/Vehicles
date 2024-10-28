@@ -1,14 +1,35 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static int noiseSum(){
-        int sum = 0;
-        Vehicles [] cars = new Vehicles[5];
+    public static double exhaustSum(Vehicles [] cars){
+        double sum = 0;
         for(Vehicles i : cars){
-            sum+= Regular.no
-
+            sum+= i.exhaust();
         }
-        return
+        return sum;
+    }
+    public static void noiseSum(Vehicles[] cars){
+        for(Vehicles i : cars) {
+            if (i instanceof Regular) {
+                ((Regular)i).noise();
+            }
+        }
+    }
+    public static void maxCharge(Vehicles[] a){
+
+    }
+    public int counterPassengers(Vehicles[] b){
+        int num = 0;
+        for(Vehicles v: b){
+            if (v instanceof Bicycle){
+                if (((Bicycle) v).isSalsela())
+                    num++;
+            }
+            else if (v instanceof Regular){
+                num += 4;
+            }
+        }
+        return(num);
     }
 
     public static void main(String[] args) {
