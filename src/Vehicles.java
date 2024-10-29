@@ -2,7 +2,7 @@ public class Vehicles {
     public int license;
     public int age;
     public int wheels;
-    public String steering;
+    public boolean wheelSteering;
     public double pollution;
 
     public int getLicense() {
@@ -21,20 +21,12 @@ public class Vehicles {
         this.age = age;
     }
 
-    public int getWheels() {
-        return wheels;
+    public boolean getWheelSteering() {
+        return wheelSteering;
     }
 
-    public void setWheels(int wheels) {
-        this.wheels = wheels;
-    }
-
-    public String getSteering() {
-        return steering;
-    }
-
-    public void setSteering(String steering) {
-        this.steering = steering;
+    public void setWheelSteering(boolean wheelSteering) {
+        this.wheelSteering = wheelSteering;
     }
 
     public double getPollution() {
@@ -50,7 +42,7 @@ public class Vehicles {
                 "license=" + license +
                 ", age=" + age +
                 ", wheels=" + wheels +
-                ", steering='" + steering + '\'' +
+                ", wheelSteering='" + wheelSteering  +
                 ", pollution=" + pollution +
                 '}';
     }

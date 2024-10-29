@@ -15,13 +15,17 @@ public class Main {
             }
         }
     }
-    public static void maxCharge(Vehicles[] a){
-        int v = ((Cart) v).getChargeTime();
-        for(Vehicles v: a){
-            if(((Cart) v).getChargeTime()  > ((Cart) v+1).getChargeTime()){
-                return v.getLicense();
+    public Vehicles bestCharge(Vehicles[] a)
+    {
+        Cart bestCharge = new Cart();
+        for (Vehicles v: a) {
+            if (v instanceof Cart) {
+                if (bestCharge.getChargeTime() < ((Cart) v).getChargeTime()) {
+                    bestCharge = (Cart) v;
+                }
             }
         }
+        return bestCharge;
     }
     public int counterPassengers(Vehicles[] b){
         int num = 0;
