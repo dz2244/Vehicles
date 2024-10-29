@@ -30,8 +30,8 @@ public class kibbuch extends Vehicles{
         }
     }
     public Vehicles [] bigAgeWithWheel(Vehicles [] arr){
-
-        int counter;
+        int counter = 0;
+        int newCounter = 0;
         for(int i = 0; i<arr.length; i++){
             if(arr[i].wheelSteering && arr[i].getAge() > 15){
                 counter++;
@@ -40,16 +40,29 @@ public class kibbuch extends Vehicles{
         if(counter > 0)
         {
             Vehicles [] newArr = new  Vehicles[counter];
-            for(int i = 0; i < count; i++)
+            for(int i = 0; i < counter; i++)
             {
-                int count1 = 0;
-                if(a[i].isWheelSteering() && a[i].getAge() > 15)
+                if(arr[i].wheelSteering && arr[i].getAge() > 15)
                 {
-                    newlist[count1] = a[i];
-                    count1++;
+                    newArr[newCounter] = arr[i];
+                    newCounter++;
+                }
+            }
+            return newArr;
+        }
+        return new Vehicles[0];
+
+    }
+
+    public int lightCarWithWheel(Vehicles [] arr){
+        int counter = 0;
+        for(int i = 0; i<arr.length; i++){
+            if(arr[i].wheelSteering ){
+                if(arr[i] instanceof Regular || arr[i] instanceof Light){
+                    counter++;
                 }
             }
         }
-        return arr;
+        return counter;
     }
 }
