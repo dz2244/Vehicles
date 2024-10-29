@@ -18,7 +18,7 @@ public class Main {
     public static void maxCharge(Vehicles[] a){
         int v = ((Cart) v).getChargeTime();
         for(Vehicles v: a){
-            if(((Cart) v).getChargeTime() > ((Cart) v+1).getChargeTime()){
+            if(((Cart) v).getChargeTime()  > ((Cart) v+1).getChargeTime()){
                 return v.getLicense();
             }
         }
