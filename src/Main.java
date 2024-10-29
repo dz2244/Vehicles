@@ -21,7 +21,7 @@ public class Main {
             if(((Cart) v).getChargeTime() > ((Cart) v+1).getChargeTime()){
                 return v.getLicense();
             }
-            }
+        }
     }
     public int counterPassengers(Vehicles[] b){
         int num = 0;
